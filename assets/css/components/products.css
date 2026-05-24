@@ -351,3 +351,103 @@
     font-size: 9px;
     color: var(--muted);
 }
+
+/* ─── Product Image Showcase ────── */
+.product-image-showcase {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 230, 118, 0.2);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(0, 230, 118, 0.08);
+    background: rgba(13, 32, 60, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    min-height: 320px;
+}
+
+.product-image-showcase:hover {
+    border-color: rgba(0, 230, 118, 0.4);
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(0, 230, 118, 0.15);
+    transform: translateY(-4px);
+}
+
+.product-image-showcase--cyan {
+    border-color: rgba(0, 229, 255, 0.2);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(0, 229, 255, 0.08);
+}
+
+.product-image-showcase--cyan:hover {
+    border-color: rgba(0, 229, 255, 0.4);
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(0, 229, 255, 0.15);
+}
+
+.product-image-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.product-image-glow--green {
+    background:
+        radial-gradient(ellipse 70% 70% at 30% 30%, rgba(0, 230, 118, 0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 50% at 80% 80%, rgba(21, 101, 192, 0.1) 0%, transparent 70%);
+}
+
+.product-image-glow--cyan {
+    background:
+        radial-gradient(ellipse 70% 70% at 70% 30%, rgba(0, 229, 255, 0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 50% at 20% 80%, rgba(0, 230, 118, 0.08) 0%, transparent 70%);
+}
+
+.product-image {
+    position: relative;
+    z-index: 1;
+    width: 85%;
+    max-width: 380px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    transition: transform 0.4s ease;
+}
+
+.product-image-showcase:hover .product-image {
+    transform: scale(1.04);
+}
+
+.product-image-badge {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: rgba(5, 11, 20, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 230, 118, 0.25);
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 0.5px;
+}
+
+.product-image-badge--cyan {
+    border-color: rgba(0, 229, 255, 0.25);
+    color: var(--cyan);
+}

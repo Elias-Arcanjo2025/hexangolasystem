@@ -72,6 +72,16 @@
 .hex-icon {
     font-size: 28px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.hex-icon svg,
+.hex-icon i {
+    width: 28px;
+    height: 28px;
 }
 
 .hex-title {

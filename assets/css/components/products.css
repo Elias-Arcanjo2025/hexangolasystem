@@ -1,0 +1,353 @@
+/* ═══════════════════════════════════════════════════════════
+   Component: Products Section
+   ═══════════════════════════════════════════════════════════ */
+
+#products {
+    background: var(--dark);
+}
+
+#products::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 50% 60% at 0% 50%, rgba(0, 230, 118, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 60% at 100% 50%, rgba(0, 229, 255, 0.06) 0%, transparent 50%);
+}
+
+.products-intro {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.product-showcase {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 70px;
+}
+
+.product-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 56px;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+}
+
+.product-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 230, 118, 0.04) 0%, transparent 50%);
+}
+
+.product-inner.reverse {
+    direction: rtl;
+}
+
+.product-inner.reverse>* {
+    direction: ltr;
+}
+
+.product-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 230, 118, 0.12);
+    border: 1px solid rgba(0, 230, 118, 0.25);
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 18px;
+}
+
+.product-name {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.product-name span {
+    color: var(--green);
+}
+
+.product-desc {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+.product-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.product-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: rgba(200, 220, 255, 0.8);
+}
+
+.product-features li::before {
+    content: '✓';
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background: rgba(0, 230, 118, 0.15);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.product-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--green);
+    border: 1.5px solid rgba(0, 230, 118, 0.4);
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.product-cta:hover {
+    background: rgba(0, 230, 118, 0.1);
+    border-color: var(--green);
+    box-shadow: 0 0 25px rgba(0, 230, 118, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ─── Product Dashboard Mocks ───── */
+.prod-dashboard {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 230, 118, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.prod-dash-header {
+    background: rgba(13, 25, 50, 0.95);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 230, 118, 0.1);
+}
+
+.prod-dash-name {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--green);
+    font-family: var(--mono);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.prod-status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.prod-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: blink 1.5s infinite;
+}
+
+.prod-dash-body {
+    background: rgba(5, 11, 20, 0.98);
+    padding: 14px;
+}
+
+/* ─── G Facilita Dashboard ──────── */
+.gf-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.gf-stat {
+    background: rgba(13, 32, 60, 0.8);
+    border: 1px solid rgba(0, 230, 118, 0.1);
+    border-radius: 8px;
+    padding: 10px 8px;
+    text-align: center;
+}
+
+.gf-stat-num {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--green);
+    font-family: var(--mono);
+}
+
+.gf-stat-lab {
+    font-size: 9px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gf-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.gf-table th {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    padding: 6px 8px;
+    border-bottom: 1px solid rgba(0, 230, 118, 0.08);
+    text-align: left;
+}
+
+.gf-table td {
+    font-size: 11px;
+    padding: 5px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    color: rgba(200, 220, 255, 0.75);
+}
+
+.gf-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.badge-green {
+    background: rgba(0, 230, 118, 0.15);
+    color: var(--green);
+}
+
+.badge-blue {
+    background: rgba(0, 229, 255, 0.12);
+    color: var(--cyan);
+}
+
+.badge-amber {
+    background: rgba(255, 183, 77, 0.12);
+    color: #ffb74d;
+}
+
+/* ─── Mwana Protected Dashboard ── */
+.mp-ai-bar {
+    background: rgba(13, 32, 60, 0.8);
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mp-ai-icon {
+    font-size: 16px;
+}
+
+.mp-ai-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.mp-ai-bar-track {
+    flex: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.mp-ai-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(to right, var(--cyan), var(--green));
+    animation: barFill 2s ease both;
+}
+
+.mp-ai-pct {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--green);
+    font-family: var(--mono);
+}
+
+.mp-claims {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.mp-claim {
+    background: rgba(13, 32, 60, 0.6);
+    border: 1px solid rgba(0, 229, 255, 0.08);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.mc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.mc-title {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(200, 220, 255, 0.7);
+}
+
+.mc-status {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.mc-val {
+    font-size: 14px;
+    font-weight: 800;
+    font-family: var(--mono);
+}
+
+.mc-sub {
+    font-size: 9px;
+    color: var(--muted);
+}

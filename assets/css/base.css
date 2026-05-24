@@ -1,0 +1,144 @@
+/* ═══════════════════════════════════════════════════════════
+   HexaNgola Systems — Base & Reset Styles
+   ═══════════════════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--black);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.65;
+}
+
+/* ─── Scrollbar ─────────────────── */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--green);
+    border-radius: 3px;
+}
+
+/* ─── Shared Section Styles ─────── */
+section {
+    padding: 100px 5%;
+    position: relative;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.section-label::before {
+    content: '';
+    width: 24px;
+    height: 2px;
+    background: linear-gradient(to right, var(--green), transparent);
+}
+
+.section-title {
+    font-size: clamp(28px, 3.5vw, 46px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -.5px;
+    margin-bottom: 16px;
+}
+
+.section-title .g {
+    color: var(--green);
+}
+
+.section-title .c {
+    color: var(--cyan);
+}
+
+.section-sub {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 560px;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+/* ─── Buttons ───────────────────── */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--green) 0%, #00c8aa 100%);
+    color: var(--black);
+    padding: 15px 34px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .3s;
+    box-shadow: 0 0 30px rgba(0, 230, 118, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    letter-spacing: .3px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 50px rgba(0, 230, 118, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--text);
+    border: 1.5px solid rgba(0, 229, 255, 0.4);
+    padding: 15px 34px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .3s;
+    backdrop-filter: blur(10px);
+    letter-spacing: .3px;
+}
+
+.btn-secondary:hover {
+    border-color: var(--cyan);
+    background: rgba(0, 229, 255, 0.08);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* ─── Global Icon Scaling ───────── */
+.lucide {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+}

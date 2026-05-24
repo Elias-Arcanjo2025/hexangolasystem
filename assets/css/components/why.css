@@ -1,0 +1,71 @@
+/* ═══════════════════════════════════════════════════════════
+   Component: Why Us Section
+   ═══════════════════════════════════════════════════════════ */
+
+#why {
+    background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%);
+}
+
+#why::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(21, 101, 192, 0.08) 0%, transparent 60%);
+}
+
+.why-grid-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.why-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.why-card {
+    background: var(--glass);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    padding: 24px 20px;
+    transition: all .35s;
+    backdrop-filter: blur(10px);
+    cursor: default;
+}
+
+.why-card:hover {
+    border-color: rgba(0, 230, 118, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 230, 118, 0.1);
+}
+
+.why-icon {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.why-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.why-text {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.why-card.featured {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(0, 230, 118, 0.12) 0%, rgba(0, 229, 255, 0.06) 100%);
+    border-color: rgba(0, 230, 118, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

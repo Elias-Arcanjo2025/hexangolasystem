@@ -1,0 +1,35 @@
+/* ═══════════════════════════════════════════════════════════
+   HexaNgola Systems — Design Tokens & CSS Variables
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+    /* ─── Core Colors ─────────────────── */
+    --black: #050b14;
+    --dark: #080f1e;
+    --dark2: #0b1428;
+    --navy: #0d1f3c;
+
+    /* ─── Brand Colors ────────────────── */
+    --green: #00e676;
+    --green2: #00c853;
+    --neon: #39ff14;
+    --blue: #1565c0;
+    --blue2: #1976d2;
+    --cyan: #00e5ff;
+    --cyan2: #18d9f0;
+    --electric: #2979ff;
+
+    /* ─── Glass & Transparency ────────── */
+    --glass: rgba(13, 32, 60, 0.55);
+    --glass2: rgba(0, 230, 118, 0.07);
+    --border: rgba(0, 230, 118, 0.18);
+    --border2: rgba(0, 229, 255, 0.15);
+
+    /* ─── Text Colors ─────────────────── */
+    --text: #e8f4ff;
+    --muted: rgba(200, 220, 255, 0.55);
+
+    /* ─── Typography ──────────────────── */
+    --font: 'Exo 2', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+}

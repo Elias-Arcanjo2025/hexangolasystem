@@ -1,0 +1,117 @@
+/* ═══════════════════════════════════════════════════════════
+   Component: About Section
+   ═══════════════════════════════════════════════════════════ */
+
+#about {
+    background: var(--dark);
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 100% 50%, rgba(0, 230, 118, 0.05) 0%, transparent 60%);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-visual {
+    position: relative;
+}
+
+.about-hex-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.about-hex {
+    aspect-ratio: 1;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    text-align: center;
+    transition: all .35s;
+    cursor: default;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hex::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 230, 118, 0.08) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity .35s;
+}
+
+.about-hex:hover {
+    border-color: var(--green);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 230, 118, 0.15);
+}
+
+.about-hex:hover::before {
+    opacity: 1;
+}
+
+.hex-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hex-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.hex-desc {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.4;
+}
+
+/* ─── Values ────────────────────── */
+.about-values {
+    margin-top: 40px;
+}
+
+.about-value-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0, 230, 118, 0.06);
+}
+
+.val-icon {
+    color: var(--green);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.val-text {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.val-sub {
+    font-size: 12px;
+    color: var(--muted);
+}

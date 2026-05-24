@@ -1,0 +1,26 @@
+/* ═══════════════════════════════════════════════════════════
+   HexaNgola Systems — Main Stylesheet
+   Master entry point — imports all partials in correct order
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── 1. Design Tokens ──────────── */
+@import url('variables.css');
+
+/* ─── 2. Base & Reset ───────────── */
+@import url('base.css');
+
+/* ─── 3. Animations ─────────────── */
+@import url('animations.css');
+
+/* ─── 4. Components ─────────────── */
+@import url('components/navbar.css');
+@import url('components/hero.css');
+@import url('components/about.css');
+@import url('components/services.css');
+@import url('components/products.css');
+@import url('components/why.css');
+@import url('components/contact.css');
+@import url('components/footer.css');
+
+/* ─── 5. Responsive Overrides ───── */
+@import url('responsive.css');
